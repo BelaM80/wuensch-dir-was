@@ -2,15 +2,34 @@
   "lists": [
     {
       "id": 1,
-      "title": "Philipps´s List"
+      "title": "Philipp´s List",
+      "item": ["Klopapier", "Mehl"]
     },
     {
       "id": 2,
-      "title": "Leon´s List"
+      "title": "Leon´s List",
+      "item": ["Thunfisch", "Nudeln"]
     },
     {
       "id": 3,
-      "title": "Béla´s List"
+      "title": "Béla´s List",
+      "item": ["Desinfektionsmittel", "Kartoffeln"]
+    },
+    {
+      "id": 4,
+      "title": "Laura´s List",
+      "item": ["Dosensuppe", "Küchenrolle"]
+    },
+    {
+      "id": 5,
+      "title": "Benji´s List",
+      "item": ["Klopapier", "Nudeln"]
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
     }
   ]
 }
