@@ -8,14 +8,17 @@ const Container = styled.div`
   box-shadow: 0 10px 20px lightblue;
 `;
 
-export default function WishListItem({ title }) {
+export default function WishListItem({ name }) {
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
   return (
     <>
-      <Container>{title}</Container>
+      <Container>{capitalizeFirstLetter(name)}</Container>
     </>
   );
 }
 
 WishListItem.propTypes = {
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
