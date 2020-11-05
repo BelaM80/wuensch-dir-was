@@ -4,6 +4,7 @@ import WishListItem from '../components/WishListItem';
 import Button from '../components/Button';
 
 import { getListById } from '../api/list';
+import DeleteButton from '../components/Deletebutton';
 
 const Wishlist = () => {
   const { id } = useParams();
@@ -21,6 +22,7 @@ const Wishlist = () => {
       })}
       <Link to="/">Back</Link>
       <Button>+</Button>
+      <DeleteButton>delete</DeleteButton>
     </>
   );
 };
