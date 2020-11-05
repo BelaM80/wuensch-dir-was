@@ -7,16 +7,18 @@ import { getListById } from '../api/list';
 
 const Wishlist = () => {
   const { id } = useParams();
-  const [listItem, setListItem] = useState(null);
+  const [list, setList] = useState(null);
 
   useEffect(async () => {
     const entry = await getListById(id);
-    setListItem(entry);
+    setList(entry);
   }, []);
   return (
     <>
-      <WishListItem name={id} />
-      <p>{listItem?.title}</p>
+      <WishListItem name={list?.title} />
+      {list?.items.map((item) => {
+        return <div>{item}</div>;
+      })}
       <Link to="/">Back</Link>
       <Button>+</Button>
     </>
