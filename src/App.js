@@ -10,11 +10,11 @@ function App() {
     <Router>
       <GlobalStyle />
       <Switch>
-        <Route path="/:id">
-          <WishList />
-        </Route>
         <Route path="/add">
           <Add />
+        </Route>
+        <Route path="/:id">
+          <WishList />
         </Route>
         <Route path="/">
           <Home />

@@ -9,12 +9,9 @@ const Container = styled.div`
 `;
 
 export default function WishListItem({ name }) {
-  function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
   return (
     <>
-      <Container>{capitalizeFirstLetter(name)}</Container>
+      <Container>{name}</Container>
     </>
   );
 }

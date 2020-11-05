@@ -2,18 +2,13 @@
   "lists": [
     {
       "id": 1,
-      "title": "Philipp´s List",
-      "items": ["Klopapier", "Mehl"]
+      "title": "Benji´s List",
+      "items": ["Dosensuppe", "Küchenrolle"]
     },
     {
       "id": 2,
-      "title": "Leon´s List",
-      "items": ["Thunfisch", "Nudeln"]
-    },
-    {
-      "id": 3,
-      "title": "Béla´s List",
-      "items": ["Desinfektionsmittel", "Kartoffeln"]
+      "title": "Béla`s List",
+      "items": ["Dosensuppe", "Küchenrolle"]
     },
     {
       "id": 4,
@@ -22,14 +17,61 @@
     },
     {
       "id": 5,
-      "title": "Benji´s List",
-      "items": ["Klopapier", "Nudeln"]
+      "title": "Franzi´s List",
+      "items": ["Dosensuppe", "Küchenrolle"]
     },
     {
+      "title": "Franzi´s List",
+      "items": ["Dosensuppe", "Küchenrolle"],
       "id": 6
     },
     {
       "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 17
+    },
+    {
+      "title": "",
+      "item": [],
+      "id": 18
+    },
+    {
+      "title": "",
+      "item": [],
+      "id": 19
+    },
+    {
+      "title": "Jack",
+      "items": [],
+      "id": 20
     }
   ]
 }

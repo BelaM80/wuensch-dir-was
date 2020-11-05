@@ -1,14 +1,20 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import WishListItem from '../components/WishListItem';
 import Button from '../components/Button';
 
-import { getListById } from '../api/list';
+import { deleteListById, getListById } from '../api/list';
 import DeleteButton from '../components/Deletebutton';
 
 const Wishlist = () => {
   const { id } = useParams();
+  const history = useHistory();
   const [list, setList] = useState(null);
+
+  const handleClick = async () => {
+    await deleteListById(list.id);
+    history.push('/');
+  };
 
   useEffect(async () => {
     const entry = await getListById(id);
@@ -22,7 +28,7 @@ const Wishlist = () => {
       })}
       <Link to="/">Back</Link>
       <Button>+</Button>
-      <DeleteButton>delete</DeleteButton>
+      <DeleteButton onClick={handleClick}>delete</DeleteButton>
     </>
   );
 };
