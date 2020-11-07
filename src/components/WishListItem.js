@@ -6,6 +6,8 @@ const Container = styled.div`
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 10px 20px lightblue;
+  text-align: center;
+  color: #fff;
 `;
 
 export default function WishListItem({ name }) {
