@@ -1,0 +1,30 @@
+{
+  "lists": [
+    {
+      "id": 2,
+      "title": "Béla",
+      "items": ["Dosensuppe", "Küchenrolle"]
+    },
+    {
+      "id": 4,
+      "title": "Laura",
+      "items": ["Dosensuppe", "Küchenrolle"]
+    },
+    {
+      "id": 5,
+      "title": "Franzi",
+      "items": ["Dosensuppe", "Küchenrolle"]
+    },
+    {
+      "title": "Franzi",
+      "items": ["Dosensuppe", "Küchenrolle"],
+      "id": 6
+    },
+
+    {
+      "title": "Jack",
+      "items": [],
+      "id": 20
+    }
+  ]
+}

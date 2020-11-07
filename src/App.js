@@ -1,20 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import WishList from './pages/Wishlist';
+import GlobalStyle from './GlobalStyle';
+import Add from './pages/Add';
+import Home from './pages/Home';
 
 function App() {
   return (
     <Router>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
+      <GlobalStyle />
       <Switch>
-        <Route path="/contact">Contact</Route>
-        <Route path="/">Home</Route>
+        <Route path="/add">
+          <Add />
+        </Route>
+        <Route path="/:id">
+          <WishList />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
       </Switch>
     </Router>
   );
