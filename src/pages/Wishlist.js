@@ -20,6 +20,10 @@ const Wishlist = () => {
     const entry = await getListById(id);
     setList(entry);
   }, []);
+  if (!list) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       <WishListItem name={list?.title} />
