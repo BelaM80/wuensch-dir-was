@@ -31,24 +31,26 @@ function Add() {
   };
 
   return (
-    <div>
-      <Link to="/">Back</Link> Add
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            value={title}
-            onChange={(event) => setTitle(event.target.value)}
-            placeholder="Enter Name"
-            required
-          />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
-      {loading && <div>Loading...</div>}
-      {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
-    </div>
+    <body>
+      <div>
+        <Link to="/">Back</Link> Add
+        <form onSubmit={handleSubmit}>
+          <label>
+            Name:
+            <input
+              type="text"
+              value={title}
+              onChange={(event) => setTitle(event.target.value)}
+              placeholder="Enter Name"
+              required
+            />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+        {loading && <div>Loading...</div>}
+        {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+      </div>
+    </body>
   );
 }
 
