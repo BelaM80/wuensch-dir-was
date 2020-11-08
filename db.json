@@ -8,17 +8,37 @@
     {
       "id": 4,
       "title": "Laura",
-      "items": ["Dosensuppe", "Küchenrolle"]
+      "items": ["Dosensuppe", "Küchenrolle"],
+      "wishes": 4
     },
     {
       "id": 5,
       "title": "Franzi",
-      "items": ["Dosensuppe", "Küchenrolle"]
+      "items": 5
     },
     {
       "title": "Jack",
-      "items": [],
       "id": 20
+    },
+    {
+      "title": "Franzi",
+      "items": ["Dosensuppe", "Küchenrolle"],
+      "id": 21
+    },
+    {
+      "title": "Tina",
+      "items": [22],
+      "id": 22
+    },
+    {
+      "title": "Mama",
+      "items": [],
+      "id": 23
+    },
+    {
+      "title": "Papa",
+      "items": 24,
+      "id": 24
     }
   ]
 }

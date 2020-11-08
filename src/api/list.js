@@ -28,3 +28,15 @@ export async function postList(list) {
   const newList = await response.json();
   return newList;
 }
+
+export async function addWishes(wishes) {
+  await fetch(`http://localhost:5000/lists/${wishes}`, {
+    method: 'PATCH',
+    body: JSON.stringify({
+      items: [wishes],
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+}

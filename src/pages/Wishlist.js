@@ -5,7 +5,7 @@ import WishListItem from '../components/WishListItem';
 import Button from '../components/Button';
 import LinkStyled from '../components/LinkStyled';
 import BackButton from '../components/BackButton';
-import { deleteListById, getListById } from '../api/list';
+import { deleteListById, getListById, addWishes } from '../api/list';
 import DeleteButton from '../components/Deletebutton';
 import DivStyled from '../components/DivStyled';
 import NameList from '../components/NameList';
@@ -14,6 +14,16 @@ const Wishlist = () => {
   const { id } = useParams();
   const history = useHistory();
   const [list, setList] = useState(null);
+  const [itemsToAdd, setItemsToAdd] = useState('');
+
+  const handleChange = async (event) => {
+    event.preventDefault();
+    setItemsToAdd([...list.items, event.target.value]);
+  };
+
+  const handleSubmit = () => {
+    addWishes(list?.id, itemsToAdd);
+  };
 
   const handleClick = async () => {
     await deleteListById(list.id);
@@ -35,7 +45,21 @@ const Wishlist = () => {
         {list?.items.map((item) => {
           return <NameList>{item}</NameList>;
         })}
-        <Button>+</Button>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>
+              Wish:
+              <input
+                type="text"
+                value={itemsToAdd}
+                onChange={handleChange}
+                placeholder="Enter Wish"
+                required
+              />
+            </label>
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
       </DivStyled>
       <BackButton>
         <LinkStyled to="/">
