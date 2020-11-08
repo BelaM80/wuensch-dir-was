@@ -1,15 +1,16 @@
 import styled from 'styled-components/macro';
 
-const DeleteButton = styled.button`
+const BackButton = styled.button`
   background: none;
   cursor: pointer;
   border-radius: 50px;
   color: white;
   border: none;
-  padding: 15px;
+  padding: 8px 10px;
+  font-size: 2rem;
+
   width: 50px;
   height: 50px;
-  font-size: 2rem;
 `;
 
-export default DeleteButton;
+export default BackButton;

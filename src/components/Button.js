@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 
 const Button = styled.button`
   border: none;
-  background: lightblue;
+  background: #05b384;
   border-radius: 50%;
   font-size: 3rem;
   color: white;

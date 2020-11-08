@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styled from 'styled-components/macro';
-import Header from '../components/Header';
 
 const Section = styled.section`
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -76,12 +75,6 @@ const Tip = styled.span`
 
 const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (
   <article>
-    <Header
-      user={user}
-      onLogin={onLogin}
-      onLogout={onLogout}
-      onCreateAccount={onCreateAccount}
-    />
     <Section>
       <h2>Pages in Storybook</h2>
       <p>
