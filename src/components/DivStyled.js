@@ -8,6 +8,7 @@ const DivStyled = styled.div`
   text-align: center;
   display: grid;
   grid-template-rows: 1fr, 1fr;
+  color: #fff;
 `;
 
 export default DivStyled;
