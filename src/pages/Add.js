@@ -42,17 +42,19 @@ function Add() {
       <div>
         <DivStyled>
           <form onSubmit={handleSubmit}>
-            <label>
-              Name:
-              <input
-                type="text"
-                value={title}
-                onChange={(event) => setTitle(event.target.value)}
-                placeholder="Enter Name"
-                required
-              />
-            </label>
-            <input type="submit" value="Submit" />
+            <div>
+              <label>
+                Name:
+                <input
+                  type="text"
+                  value={title}
+                  onChange={(event) => setTitle(event.target.value)}
+                  placeholder="Enter Name"
+                  required
+                />
+              </label>
+              <input type="submit" value="Submit" />
+            </div>
           </form>
         </DivStyled>
         <BackButton>

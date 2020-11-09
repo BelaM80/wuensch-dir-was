@@ -7,7 +7,7 @@ export const Container = styled.div`
   box-shadow: 0 10px 20px #661c06;
   text-align: center;
   color: #fff;
-  font-size: 1.8;
+  font-size: 1.6;
   background-color: #b32800;
 `;
 
