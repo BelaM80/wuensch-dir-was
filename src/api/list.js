@@ -29,11 +29,11 @@ export async function postList(list) {
   return newList;
 }
 
-export async function addWishes(wishes) {
-  await fetch(`http://localhost:5000/lists/${wishes}`, {
+export async function addWishes(id, wishes) {
+  await fetch(`http://localhost:5000/lists/${id}`, {
     method: 'PATCH',
     body: JSON.stringify({
-      items: [wishes],
+      items: wishes,
     }),
     headers: {
       'Content-Type': 'application/json',

@@ -1,8 +1,8 @@
 import { useHistory, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-// import styled from 'styled-components';
+
 import WishListItem from '../components/WishListItem';
-import Button from '../components/Button';
+
 import LinkStyled from '../components/LinkStyled';
 import BackButton from '../components/BackButton';
 import { deleteListById, getListById, addWishes } from '../api/list';
@@ -15,14 +15,18 @@ const Wishlist = () => {
   const history = useHistory();
   const [list, setList] = useState(null);
   const [itemsToAdd, setItemsToAdd] = useState('');
+  const [items, setItems] = useState([]);
 
   const handleChange = async (event) => {
-    event.preventDefault();
-    setItemsToAdd([...list.items, event.target.value]);
+    setItemsToAdd(event.target.value);
   };
 
-  const handleSubmit = () => {
-    addWishes(list?.id, itemsToAdd);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const newItems = [...items, itemsToAdd];
+    setItems(newItems);
+    addWishes(list?.id, newItems);
+    setItemsToAdd('');
   };
 
   const handleClick = async () => {
@@ -33,6 +37,7 @@ const Wishlist = () => {
   useEffect(async () => {
     const entry = await getListById(id);
     setList(entry);
+    setItems(entry.items);
   }, []);
   if (!list) {
     return <div>Loading...</div>;
@@ -42,9 +47,9 @@ const Wishlist = () => {
     <body>
       <WishListItem name={list?.title} />
       <DivStyled>
-        {list?.items.map((item) => {
-          return <NameList>{item}</NameList>;
-        })}
+        {items.map((item) => (
+          <NameList key={item}>{item}</NameList>
+        ))}
         <form onSubmit={handleSubmit}>
           <div>
             <label>

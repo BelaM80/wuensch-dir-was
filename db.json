@@ -27,7 +27,7 @@
     },
     {
       "title": "Tina",
-      "items": [22],
+      "items": [],
       "id": 22
     },
     {
@@ -39,6 +39,16 @@
       "title": "Papa",
       "items": 24,
       "id": 24
+    },
+    {
+      "title": "Dennis",
+      "items": [],
+      "id": 25
+    },
+    {
+      "title": "Philipp",
+      "items": ["Hund", "Hund", "Katze", "Katze", "Fisch", "Uhr"],
+      "id": 26
     }
   ]
 }
